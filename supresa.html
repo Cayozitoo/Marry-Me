@@ -1,0 +1,98 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Surpresa meu amor!!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <script>
+        function esconde() {
+  document.getElementById("exemplo").style.visibility = "hidden";
+}
+setTimeout(esconde, 3000);
+        window.alert("Se você chegou aqui, saiba que é uma pessoa muito especial !")
+        window.confirm("Tem certeza de que quer continuar ?")
+        window.addEventListener('load', function() {
+            var simButton = document.getElementById('sim');
+            var naoButton = document.getElementById('nao');
+            var animacaoDiv = document.getElementById('animacao');
+            var isTouchDevice = false;
+            
+            // Verifica se o dispositivo é um dispositivo de toque (celular ou tablet)
+            if ('ontouchstart' in window || navigator.maxTouchPoints) {
+                isTouchDevice = true;
+            }
+            
+            simButton.addEventListener('click', function() {
+                simButton.style.display = 'none';
+                naoButton.style.display = 'none';
+                animacaoDiv.style.display = 'block';
+                animacaoDiv.classList.add('animacao');
+            });
+            
+            if (!isTouchDevice) {
+                var maxX = window.innerWidth - naoButton.offsetWidth;
+                var maxY = window.innerHeight - naoButton.offsetHeight;
+                
+                document.addEventListener('mousemove', function(e) {
+                    var mouseX = e.clientX;
+                    var mouseY = e.clientY;
+                    
+                    var naoButtonRect = naoButton.getBoundingClientRect();
+                    var naoButtonX = naoButtonRect.left + naoButtonRect.width / 2;
+                    var naoButtonY = naoButtonRect.top + naoButtonRect.height / 2;
+                    
+                    var distance = Math.sqrt(Math.pow(mouseX - naoButtonX, 2) + Math.pow(mouseY - naoButtonY, 2));
+                    
+                    if (distance < 100) {
+                        var newX = Math.floor(Math.random() * (maxX - naoButton.offsetWidth));
+                        var newY = Math.floor(Math.random() * (maxY - naoButton.offsetHeight));
+                        
+                        naoButton.style.left = newX + 'px';
+                        naoButton.style.top = newY + 'px';
+                    }
+                });
+            } else {
+                var mc = new Hammer(naoButton);
+                var startX, startY;
+                var buttonRect = naoButton.getBoundingClientRect();
+                
+                mc.on("panstart", function(e) {
+                    startX = buttonRect.left;
+                    startY = buttonRect.top;
+                });
+                
+                mc.on("panmove", function(e) {
+                    var newX = startX + e.deltaX;
+                    var newY = startY + e.deltaY;
+                    
+                    naoButton.style.left = newX + 'px';
+                    naoButton.style.top = newY + 'px';
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pedido">
+        <h1>Marry me ?</h1>
+    </div>
+    
+    <div class="botoes">
+        <button id="sim" class="botao">Sim</button>
+        <button id="nao" class="botao">Não</button>
+    </div>
+    
+    <div id="animacao" class="animacao">
+        <img src="imagens/kiss5.gif" alt="gatinho" >
+        <br>Estamos casados 🎉 
+        
+    </div>
+    
+    
+</body>
+
+</html>
+</body>
+</html>
