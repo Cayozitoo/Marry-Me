@@ -6,12 +6,14 @@ Este é um exemplo de uma página HTML para um pedido de casamento surpresa! A p
 
 - Exibe um pedido de casamento surpresa.
 - Permite que o destinatário escolha "Sim" ou "Não" para a proposta.
+- Ao tentar clicar em "Não" o botão ira mudar para alguma posição aleatória, sendo assim impossível clicar nele.
 - Se "Sim" for selecionado, uma animação de casamento será exibida.
 
 ## Como Executar
 
 1. Clone este repositório em sua máquina local.
 2. Abra o arquivo `index.html` em um navegador da web.
+3. Ou acesse o site : https://cayozitoo.github.io/surpresa/supresa.html
 
 ## Recursos
 
