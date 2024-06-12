@@ -13,7 +13,7 @@ Este é um exemplo de uma página HTML para um pedido de casamento surpresa! A p
 
 1. Clone este repositório em sua máquina local.
 2. Abra o arquivo `index.html` em um navegador da web.
-3. Ou acesse o site : https://cayozitoo.github.io/surpresa/supresa.html
+3. Ou acesse o site : https://cayozitoo.github.io
 
 ## Recursos
 
