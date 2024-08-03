@@ -1,6 +1,6 @@
 # Pedido de Casamento Surpresa 💍💖
 
-Este é um exemplo de uma página HTML para um pedido de casamento surpresa! A página exibe um pedido de casamento e permite que o destinatário escolha "Sim" ou "Não" para a proposta. Se "Sim" for selecionado, uma animação será exibida com uma mensagem de casamento.
+Este é um exemplo de uma página HTML para um pedido de casamento surpresa! A página exibe um pedido de casamento e permite que minha namorada maravilhosa doutora Bárbara Bonfim escolha "Sim" ou "Não" para a proposta. Se "Sim" for selecionado, uma animação será exibida com uma mensagem de casamento, caso escolha não, o botão alternará de lugar fazendo assim ser impossível de selecionar esta opção.
 
 ## Funcionalidades
 
